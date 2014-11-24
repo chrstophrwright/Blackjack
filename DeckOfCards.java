@@ -3,7 +3,7 @@
 
 import java.util.*;
 
-public abstract class Deck implements Comparable{
+public abstract class Deck{
 
 	public static ArrayList<Card> deck;
 	public static int deckSize;
@@ -13,26 +13,32 @@ public abstract class Deck implements Comparable{
 		decksize = deckSize;
 	}
 
-	public void discard(int card){
-		this.remove(card);
+	public card dealCard(){
+		Card temp = this.get(0);
+		this.remove(0);
 		this.deckSize --;
-	}
-
-	public card dealCards(){
-		System.out.print(this.get(0));
-		discard(0);
-	}
-
-	public void shuffleDeck(){
-		for (int i=0; i<deck.deckSize; i++){}
+		return temp;
 	}
 
 	public card[] dealManyCards(int num){
-		ArrayList <Card> = 
+		ArrayList<Card> cardSet = new ArrayList<Card>();
 		while (num){
-			dealCards();
+			cardSet.add(dealCard());
 			num--;
 		}
+		return cardSet;
 	}
 
+	public void shuffleDeck(){
+		Random rand = newRandom();
+		int i = 0;
+		while (i<this.deckSize){
+			Card card = this[i];
+			int swap = rand.nextInt(52);
+			Card temp = deck.get(swap);
+			this[swap] = card;
+			this[i] = temp;
+		}
+	}
+	
 }

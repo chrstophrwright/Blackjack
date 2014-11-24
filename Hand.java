@@ -1,4 +1,4 @@
-public HandOfCards extends Deck(){
+public Hand extends Deck(){
 	public static ArrayList <Card> hand;
 	public static int handSize;
 
@@ -11,7 +11,12 @@ public HandOfCards extends Deck(){
 		hand.add(card);
 	}
 
-	public randomDiscardFromHand(){
+	public void discard(int card){
+		this.remove(card);
+		this.handSize --;
+	}
+
+	public randomDiscard(){
 		Random rand = new Random();
 		hand.remove(rand.nextInt(handSize)); 
 	}

@@ -23,4 +23,10 @@ public class 52Card extends Card{
 				break;
 		}
 	}
+
+		public static int compareTo(Card card){
+			if       (this.amount > card.amount) return 1;
+			else if ((this.amount = card.amount) return 0;
+			else if  (this.amount < card.amount) return -1;
+	}
 }
