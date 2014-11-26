@@ -1,6 +1,6 @@
-public class 52Deck extends Deck(){
+public class Deck52 extends Deck(){
 	private static String[] suits; = ["Clubs","Diamonds","Hearts","Spades"] ;
-	private static int[] amounts; = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+	private static int[] amounts; = [2,3,4,5,6,7,8,9,10,11,12,13,14];
 
 	Deck(){		
 		deck = new ArrayList<Card>[52]();

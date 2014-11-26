@@ -21,4 +21,31 @@ public Hand extends Deck(){
 		hand.remove(rand.nextInt(handSize)); 
 	}
 	
+	public <T> getCardInfo(<T> info){
+		return card.info;
+	}
+
+	public <T>getHandInfo(<T> info){
+		<T> infoSum;
+		while (Card in Hand){
+			infoSum += getCardInfo(info);
+		}
+		return infoSum;
+	}
+
+	public getCardsInHand(){
+		return getHandInfo(name)
+	}
+
+	public int getSum(){
+		return getHandInfo(amount);
+	}
+
+	public int getSum(){
+		int sum = 0;
+		while (card in hand){
+			total += card.amount;
+		}
+		return sum;
+	}
 }

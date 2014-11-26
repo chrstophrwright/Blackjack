@@ -14,13 +14,13 @@ public abstract class Deck{
 	}
 
 	public card dealCard(){
-		Card temp = this.get(0);
+		Card topCard = this.get(0);
 		this.remove(0);
 		this.deckSize --;
-		return temp;
+		return topCard;
 	}
 
-	public card[] dealManyCards(int num){
+	public card[] dealCards(int num){
 		ArrayList<Card> cardSet = new ArrayList<Card>();
 		while (num){
 			cardSet.add(dealCard());
